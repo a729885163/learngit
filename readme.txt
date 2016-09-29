@@ -3,3 +3,4 @@ Git is free software distributed under the GPL.
 Git has mytable index called stage.
 Git tracks changes of files.
 hello git
+Creating a new branch is quick & simple.
