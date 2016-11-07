@@ -1,0 +1,165 @@
+1：场景定制商家分类接口
+   http://m.xiaoyangapp.net/Scence/category_merchant
+  提交参数：（post)
+  utoken  唯一票据
+
+  正确返回数据格式：
+{
+  "errcode": "0",
+  "errmsg": "",
+  "data": [
+    {
+      "cname": "dafenlei", 【类别名称】
+      "bid": "1",  【类别id】
+      "cimgs": "/Public/Upload/2016-10-24/580d7b63652c0.jpg"  【类别图片】
+    }
+  ]
+}
+
+
+   错误返回数据格式：
+{
+  'errcode':'40001',
+  'errmsg':'无数据',
+  'data':''
+}
+
+
+2：场景定制标签接口接口
+   http://m.xiaoyangapp.net/Scence/custommade_initialize
+  提交参数：（post)
+  utoken  唯一票据
+  bid 【商家分类id 如果bid有多个,以逗号链接如-》'3,2,6'】
+  正确返回数据格式：
+{
+  "errcode": "0",
+  "errmsg": "",
+  "data": {
+    "1": [
+      {
+        "tcontent": "环境好", 【标签名称】
+        "tid": "1",  【标签id】
+        "bid": "1"  【分类id】
+      },
+      {
+        "tcontent": "艳遇高发",
+        "tid": "16",
+        "bid": "1"
+      }
+    ],
+    "2": [
+      {
+        "tcontent": "美女多",
+        "tid": "2",
+        "bid": "2"
+      },
+      {
+        "tcontent": "日本料理",
+        "tid": "15",
+        "bid": "2"
+      }
+    ]
+  }
+}
+
+
+   错误返回数据格式：
+{
+  'errcode':'40001',
+  'errmsg':'无数据',
+  'data':''
+}
+
+
+
+3：默认场景  标签接口
+http://m.xiaoyangapp.net/Scence/default_scence
+  提交参数：（post)
+  utoken  唯一票据
+  正确返回数据格式：
+{
+  "errcode": "0",
+  "errmsg": "",
+  "data": {
+    "1": [
+      {
+        "tcontent": "环境好", 【标签名称】
+        "tid": "1",  【标签id】
+        "bid": "1",
+【分类id】
+      },
+      {
+        "tcontent": "艳遇高发",
+        "tid": "16",
+        "bid": "1"
+      }
+    ],
+    "2": [
+      {
+        "tcontent": "美女多",
+        "tid": "2",
+        "bid": "2"
+      },
+      {
+        "tcontent": "日本料理",
+        "tid": "15",
+        "bid": "2"
+      }
+    ]
+  }
+}
+
+
+
+
+
+3：默认场景  场景列表数据
+http://m.xiaoyangapp.net/Scence/default_scence_list
+  提交参数：（post)
+  utoken  唯一票据
+  tid 【传递过来的标签id， 如果tid有多个,以逗号分隔开如 '3,2,6'】
+  正确返回数据格式：
+{
+
+  "errcode": "0",
+
+  "errmsg": "",
+
+  "data": {
+
+    "1": [
+
+      {
+ 
+       "tid": "1",
+                                               【标签ID】
+        "tcontent": "环境好",                                    【标签内容】    
+        "title": "美女多多，不一样的体验！",
+                     【标签说明】
+        "img": "/Public/Upload/2016-11-03/581afd7ea9d1c.jpg",    【标签封面图片】  
+
+       "jid": "6",                                               【商家ID】
+        "mnickname": "心动氧吧测试吧（测试专用店铺）"            【商户名称】
+     },
+
+      {
+
+        "tid": "1",
+
+        "tcontent": "环境好",
+
+        "title": "美女多多，不一样的体验！",
+
+        "img": "/Public/Upload/2016-11-03/581afd7ea9d1c.jpg",
+
+        "jid": "29",
+
+        "mnickname": "豪园唐轩（西湖店）"
+
+      }
+
+    ]
+
+  }
+
+}
